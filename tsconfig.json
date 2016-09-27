@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./bin/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true
+  },
+  "include": [
+    "src/**/*",
+    "test/**/*.spec.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "testimmutability",
+    "bin"
+  ]
+}
