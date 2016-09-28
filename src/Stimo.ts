@@ -102,13 +102,17 @@ function make_setter(target: any, index: number) {
       return this;
     }
 
-    // otherwise create clone
-    const clonedObject = Object.create(target);
-    // copy values array from the original object
-    clonedObject.__stimo__PropertyValues = this.__stimo__PropertyValues.slice(0);
-    // and mutate property value
-    clonedObject.__stimo__PropertyValues[index] = val;
-    return clonedObject;
+    if (this.__stimo__PropertyValues[index] !== val) {
+      // otherwise create clone
+      const clonedObject = Object.create(target);
+      // copy values array from the original object
+      clonedObject.__stimo__PropertyValues = this.__stimo__PropertyValues.slice(0);
+      // and mutate property value
+      clonedObject.__stimo__PropertyValues[index] = val;
+      return clonedObject;
+    } else {
+      return this;
+    }
 
   };
 }
