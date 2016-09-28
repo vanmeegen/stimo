@@ -75,9 +75,12 @@ expect(m !== n);
 
 ## Background
 After checking lots of options for typing immutable objects, I was left disappointed.
-Thinking about using decorators to generated the access code, I found https://github.com/danielearwicker/doop, which seemed close to what we need for our application.
 
-Porting the application to doop was not real fun, because of the accessor syntax of doop, so I decided to write something myself. stimo has more boilerplate than doop, but has several advantages, 
+Thinking about using decorators to generated the access code, I found https://github.com/danielearwicker/doop, which seemed close to what we need for our application. Porting the application to doop was not real fun, because of the accessor syntax of doop, so I decided to write something myself.
+
+stimo has more boilerplate than doop, but has some advantages: stronger typing, property assignment will be flagged as error by compiler, type compatibility with handcoded immutable object.
+
+If you have any ideas in further reducing boilerplate, please contribute.
 
 
 
