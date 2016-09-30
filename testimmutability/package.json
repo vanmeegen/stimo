@@ -2,42 +2,26 @@
   "name": "testimmutability",
   "version": "0.1.0",
   "scripts": {
-    "start": "node src/server",
-    "webpack": "webpack --watch",
-    "tslint": "tslint -r node_modules/tslint-microsoft-contrib -c tslint.json src/index.tsx",
-    "test": "mocha test -r jsdom-global/register --compilers ts:ts-node/register --recursive",
+    "test": "mocha test --compilers ts:ts-node/register --recursive",
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "doop": "^2.2.1",
-    "es6-shim": "^0.35.1",
-    "immutable": "^3.8.1",
-    "seamless-immutable": "''6.1.1",
+    "doop": "2.2.1",
+    "es6-shim": "0.35.1",
+    "immutable": "3.8.1",
+    "seamless-immutable": "6.1.1",
     "stimo": "0.5.1",
-    "timm": "^1.0.0",
     "typed-immutable-record": "0.0.5",
-    "typescript": "^2.0.0"
+    "typescript": "2.0.3"
   },
   "devDependencies": {
-    "@types/chai": "^3.4.30",
+    "@types/chai": "3.4.30",
     "@types/es6-shim": "0.0.30",
-    "@types/immutable": "^3.8.1",
-    "@types/mocha": "^2.2.29",
-    "chai": "^3.5.0",
-    "css-loader": "^0.23.1",
-    "file-loader": "^0.9.0",
-    "jsdom": "~9.3.0",
-    "jsdom-global": "~2.0.0",
-    "mocha": "^2.5.3",
-    "source-map-loader": "^0.1.5",
-    "style-loader": "^0.13.1",
-    "ts-loader": "^0.8.2",
-    "url-loader": "^0.5.7",
+    "@types/immutable": "3.8.1",
+    "@types/mocha": "2.2.29",
+    "chai": "3.5.0",
+    "mocha": "2.5.3",
     "ts-node": "latest",
-    "tslint": "next",
-    "tslint-microsoft-contrib": "^2.0.8",
-    "typescript": "latest",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "typescript": "2.0.3"
   }
 }
