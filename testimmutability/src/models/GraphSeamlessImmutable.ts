@@ -15,10 +15,12 @@ export enum SelectionKind {
 // +: code completion for everything
 // +: additional methods possible
 // +: constructor can be used
-// -: seamless-immutable exposed in interfac
+// -: seamless-immutable exposed in interface
 // -: no shared data structures from immutable
 // -: no maps, sets
 // -: no performance improvements
+// -: no typed setter
+// -: type does not give any hint that it is immutable
 
 export class GNodeMutable {
   // fake for typing

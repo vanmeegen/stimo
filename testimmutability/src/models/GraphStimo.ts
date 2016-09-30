@@ -1,6 +1,6 @@
 import {Map, Iterator} from 'immutable';
 import * as ES6 from 'es6-shim';
-import {stimo, stimo_get, stimo_set} from './Stimo';
+import {stimo, stimo_get, stimo_set} from 'stimo';
 export enum SelectionKind {
   None, Primary, Secondary
 }
@@ -9,12 +9,12 @@ export enum SelectionKind {
 // +: fast arraycopy on mutations https://smellegantcode.wordpress.com/2016/03/07/doop-immutable-classes-for-typescript/
 // +: immutable not exposed in interface
 // +: easily usable
+// +: no duplicate code
 // +: code completion for attributes
 // +: additional methods possible
 // +: constructor can be used
 // +: subclassing possible
 // +: completion/type in setter
-// +: no duplicate code
 // -: getter and setter must be specified with full signature
 // -: getter and setter must have initial implementation, but it will be replaced
 

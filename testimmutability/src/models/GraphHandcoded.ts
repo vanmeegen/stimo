@@ -4,16 +4,16 @@ export enum SelectionKind {
   None, Primary, Secondary
 }
 
-// hacking immutable.d.ts as discussed in https://github.com/facebook/immutable-js/issues/341
+// handcoded implementation of all setters using Object.assign
 // +: shared data structures from immutable
 // +: immutable not exposed in interface
 // +: easily usable
 // +: code completion for attributes
 // +: additional methods possible
 // +: constructor can be used
-// -: triplicate attribute lists in Record constructor, class and interface definition
-// -: no completion/type in setter
-
+// +: simple, no magic
+// -: Object.assign is not very efficient
+// -: tedious implementation easy to get wrong
 
 export class GNode {
   readonly title:string;

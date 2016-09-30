@@ -16,7 +16,8 @@ export enum SelectionKind {
 // +: subclassing possible
 // +: completion/type in setter
 // -: getter must be accessed using x() notation with brackets --> not easy to change
-// -: type not compatible with javascript object
+// -: type not compatible with javascript object since properties are functions
+// -: wrong assignment destroys property function
 
 @doop
 export class GNode {

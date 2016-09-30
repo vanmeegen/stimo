@@ -16,8 +16,7 @@ export interface IGNode {
   readonly selection: SelectionKind;
   getRatio(): number;
 }
-// app data model
-// using typed-immutable-record library
+// typed-immutable-record library
 // +: shared data structures from immutable
 // +: no duplicate attribute definition
 // +: clean interface hiding details
