@@ -18,6 +18,9 @@ describe('GraphStimo: access and code completion', () => {
     expect(n).to.be.an.instanceOf(GNode);
     expect(n.setTitle("Another")).to.be.an.instanceOf(GNode);
   });
+  it('will not mutate on setting same value', () => {
+    expect(n.setTitle("Title")).equals(n);
+  });
   it('can call additional methods ', () => {
     expect(n.getRatio()).equals(1);
   });
