@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./bin/",
+    "outDir": "bin",
     "sourceMap": true,
     "noImplicitAny": false,
     "module": "commonjs",
@@ -8,6 +8,7 @@
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",
+    "declaration":true,
     "experimentalDecorators": true
   },
   "include": [

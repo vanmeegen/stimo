@@ -29,6 +29,11 @@ Disadvantages:
 * getter and setter must have initial dummy implementation, which will be replaced by auto-generated one
 * needs Typescript setting "experimentalDecorators": true
 
+## Preconditions
+* Typescript >= 1.8 (but I think it should work with other type systems as well, since decorators are ES 6 feature)
+* Need for Immutability
+* node and npm
+
 ## Installation
 * TODO: should be npm install stimo
 * in tsconfig.json set CompilerOption "experimentalDecorators": true
@@ -38,9 +43,9 @@ Disadvantages:
 @stimo
 class MyRecord {
   @stimo_get get title(): string { return null; /* dummy for compiler */};
-  @stimo_set setTitle(title:string): MyRecord { return null;};
+  @stimo_set setTitle(title:string): MyRecord { return null;/* dummy for compiler */};
   @stimo_get get id(): number { return null; /* dummy for compiler */};
-  @stimo_set setId(id:number): MyRecord { return null;};
+  @stimo_set setId(id:number): MyRecord { return null;/* dummy for compiler */};
 
   constructor(title: string, id:number) {
     this.setTitle(title).setId(id);
@@ -82,6 +87,14 @@ stimo has more boilerplate than doop, but has some advantages: stronger typing, 
 
 If you have any ideas in further reducing boilerplate, please contribute.
 
+References of other approaches trying to solve the same problem (none of them I found satisfying):
+* https://github.com/rangle/typed-immutable-record
+* https://coderwall.com/p/vxk_tg/using-immutable-js-in-typescript
+* http://themapguyde.blogspot.de/2016/04/making-immutablejs-objects-easier-to.html
+* https://github.com/Microsoft/TypeScript/issues/2225
 
+Implementations and Tests for different approaches creating typed immutable object can be found in subdirectory 'testimmutability' in this repo.
+
+All are commented with pros/cons of the respective approach.
 
 

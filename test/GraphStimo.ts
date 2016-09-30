@@ -1,6 +1,5 @@
 import {Map, Iterator} from 'immutable';
-import * as ES6 from 'es6-shim';
-import {stimo, stimo_get, stimo_set} from '../src/Stimo';
+import {stimo, stimo_get, stimo_set} from '../src/stimo';
 export enum SelectionKind {
   None, Primary, Secondary
 }
@@ -14,6 +13,7 @@ export enum SelectionKind {
 // +: constructor can be used
 // +: subclassing possible
 // +: completion/type in setter
+// +: accidental setting not possible (stimo.x = 5 will not compile)
 // +: no duplicate code
 // -: getter and setter must be specified with full signature
 // -: getter and setter must have initial implementation, but it will be replaced
