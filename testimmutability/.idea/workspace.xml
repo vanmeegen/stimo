@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="490d23c1-7490-4489-a8c0-a4372be26534" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tslint.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/../.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="testimmutability.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,18 +30,7 @@
     <favorites_list name="testimmutability" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -324,7 +308,7 @@
       <workItem from="1474880046540" duration="6093000" />
       <workItem from="1474959303046" duration="620000" />
       <workItem from="1474960021991" duration="15366000" />
-      <workItem from="1475228045181" duration="1727000" />
+      <workItem from="1475228045181" duration="1779000" />
     </task>
     <task id="LOCAL-00001" summary="add doop example and test">
       <created>1474450698024</created>
@@ -361,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475229361728</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cleanup testimmutability project, remove unneeded stuff">
+      <created>1475229798765</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1475229798765</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -397,7 +388,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31381000" />
+    <option name="totallyTimeSpent" value="31433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-5" width="1936" height="1176" extended-state="6" />
@@ -461,7 +452,8 @@
     <MESSAGE value="add handcoded example, handcoded with internal array implementation, stimo decorators" />
     <MESSAGE value="add inheritance support to stimo" />
     <MESSAGE value="use published stimo, update descriptions, remove handcoded optimized" />
-    <option name="LAST_COMMIT_MESSAGE" value="use published stimo, update descriptions, remove handcoded optimized" />
+    <MESSAGE value="cleanup testimmutability project, remove unneeded stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup testimmutability project, remove unneeded stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
