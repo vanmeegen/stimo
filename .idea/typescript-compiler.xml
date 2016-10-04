@@ -2,7 +2,8 @@
 <project version="4">
   <component name="TypeScriptCompiler">
     <option name="isCompilerEnabled" value="true" />
-    <option name="typeScriptServiceDirectory" value="D:\dev\ide\metus-master\git\stimo\node_modules\typescript\lib" />
+    <option name="typeScriptServiceDirectory" value="C:\Users\Marco\WebstormProjects\stimo\node_modules\typescript\lib" />
+    <option name="nodeInterpreterTextField" value="D:/dev/tools/nodejs/node" />
     <option name="useConfig" value="true" />
     <option name="versionType" value="SERVICE_DIRECTORY" />
   </component>

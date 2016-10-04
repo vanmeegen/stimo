@@ -112,8 +112,8 @@ export class GExtendedNode extends GNode {
   @stimo_set setAdditional(additional:string) {
     return null;
   }
-
 }
+
 export class Graph {
   nodes = Map<Number,GNode>();
 
@@ -129,15 +129,23 @@ export class Graph {
 
   moveNodes(nodeIds: number[], dx: number, dy: number) {
     for (let nodeId of nodeIds) {
-      // to mutate, use specific implementation
-      var node: GNode = <GNode>this.getNode(nodeId);
-      if (!node) {
-        throw Error(`There is no node with id ${nodeId} to move`)
-      }
-      var updated: GNode = node.setX(node.x + dx).setY(node.y + dy);
-      if (node !== updated) {
-        this.nodes = this.nodes.set(updated.id, updated);
-      }
+      this.updateNode(nodeId,node=> node.setX(node.x + dx).setY(node.y + dy));
+    }
+  }
+
+  /**
+   * for nested updates or collection updates typed helpers are a good choice
+   * @param id node id to mutate
+   * @param mutator mutator function on the node
+   */
+  updateNode(id:number, mutator:(GNode)=>GNode){
+    let node:GNode = this.nodes.get(id);
+    if (!node) {
+      throw Error(`There is no node with id ${id} to move`)
+    }
+    let updated:GNode = mutator(node);
+    if (node !== updated){
+      this.nodes = this.nodes.set(updated.id, updated);
     }
   }
 
