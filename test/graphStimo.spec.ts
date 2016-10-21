@@ -2,7 +2,7 @@
 import {GNode, Graph, GExtendedNode} from './GraphStimo'
 import {expect} from 'chai'
 
-describe('GraphStimo: access and code completion', () => {
+describe('access and code completion', () => {
   // constructor
   let n = new GNode("Title", 1, 1, 2, 10, 10);
   it("can get properties with dot", ()=> {
@@ -19,7 +19,7 @@ describe('GraphStimo: access and code completion', () => {
     expect(n.setTitle("Another")).to.be.an.instanceOf(GNode);
   });
   it('will not mutate on setting same value', () => {
-    expect(n.setTitle("Title")).equals(n);
+    expect(n.setTitle("Title")).equal(n);
   });
   it('can call additional methods ', () => {
     expect(n.getRatio()).equals(1);
@@ -32,7 +32,7 @@ describe('GraphStimo: access and code completion', () => {
   // });
 });
 
-describe('GraphStimo: graph.moveNodes', () => {
+describe('graph.moveNodes', () => {
   var graph;
   var initialNodes;
   beforeEach(() => {
@@ -61,7 +61,7 @@ describe('GraphStimo: graph.moveNodes', () => {
 
 describe('GraphStimo: inheritance', () => {
   // constructor
-  let n = new GExtendedNode("additional","Title", 1, 1, 2, 10, 10);
+  let n = new GExtendedNode("additional", "Title", 1, 1, 2, 10, 10);
   it("can get extended properties with dot", ()=> {
     expect(n.title).equals("Title");
     expect(n.additional).equals("additional");
@@ -77,5 +77,23 @@ describe('GraphStimo: inheritance', () => {
   });
   it('can call inherited methods ', () => {
     expect(n.getRatio()).equals(1);
+  });
+});
+
+describe('withMutations', () => {
+  let n: GNode = new GNode("Title", 0, 0, 0, 0, 0);
+  let flag: boolean = false;
+  let check = (mutated: GNode) => {
+    expect(mutated).to.not.equal(n);
+    expect((mutated as any).__stimo__Constructing).to.equal(1,"mutated instance is not mutable");
+  }
+  // constructor
+  it("will only copy once and then mutate inplace", ()=> {
+    let mutated: GNode = n.withMutations((m: GNode)=> {
+      check(m);
+      return m.setHeight(5).setWidth(10);
+    });
+    expect(mutated.height).to.equal(5);
+    expect(mutated.width).to.equal(10);
   });
 });

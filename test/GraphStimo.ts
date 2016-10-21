@@ -1,5 +1,5 @@
 import {Map, Iterator} from 'immutable';
-import {stimo, stimo_get, stimo_set} from '../src/stimo';
+import {stimo, stimo_get, stimo_set, stimo_mut} from '../src/stimo';
 export enum SelectionKind {
   None, Primary, Secondary
 }
@@ -92,6 +92,10 @@ export class GNode {
   @stimo_set setSelection(newValue: SelectionKind): GNode {
     return null;
   }
+
+  @stimo_mut withMutations(mutator: (GNode)=>GNode): GNode {
+    return null;
+  }
 }
 
 @stimo
@@ -106,10 +110,12 @@ export class GExtendedNode extends GNode {
     super(title, id, x, y, width, height, selection);
     this.setAdditional(additional);
   }
+
   @stimo_get get additional(): string {
     return null;
   }
-  @stimo_set setAdditional(additional:string) {
+
+  @stimo_set setAdditional(additional: string) {
     return null;
   }
 }
@@ -129,7 +135,7 @@ export class Graph {
 
   moveNodes(nodeIds: number[], dx: number, dy: number) {
     for (let nodeId of nodeIds) {
-      this.updateNode(nodeId,node=> node.setX(node.x + dx).setY(node.y + dy));
+      this.updateNode(nodeId, node=> node.setX(node.x + dx).setY(node.y + dy));
     }
   }
 
@@ -138,13 +144,13 @@ export class Graph {
    * @param id node id to mutate
    * @param mutator mutator function on the node
    */
-  updateNode(id:number, mutator:(GNode)=>GNode){
-    let node:GNode = this.nodes.get(id);
+  updateNode(id: number, mutator: (GNode)=>GNode) {
+    let node: GNode = this.nodes.get(id);
     if (!node) {
       throw Error(`There is no node with id ${id} to move`)
     }
-    let updated:GNode = mutator(node);
-    if (node !== updated){
+    let updated: GNode = mutator(node);
+    if (node !== updated) {
       this.nodes = this.nodes.set(updated.id, updated);
     }
   }

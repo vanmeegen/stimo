@@ -34,7 +34,12 @@ export function stimo(constructor: Function): any {
       }
       if (prototype[setterKey]) {
         // update all setters to clone correct derived type
-        Object.defineProperty(prototype, setterKey, {writable:true, enumerable:true, configurable:true, value:make_setter(prototype, propNameMap[key])});
+        Object.defineProperty(prototype, setterKey, {
+          writable: true,
+          enumerable: true,
+          configurable: true,
+          value: make_setter(prototype, propNameMap[key])
+        });
       }
     }
   }
@@ -63,6 +68,37 @@ export function stimo_set(target: any, propertyKey: string, descriptor: TypedPro
   return descriptor;
 }
 
+/**
+ * decorate withMutations method to batch updates into one copy
+ * @param target target object
+ * @param propertyKey key of property
+ * @param descriptor descriptor
+ * @return {TypedPropertyDescriptor<any>} which implements the getter using an indexed array
+ */
+export function stimo_mut(target: any, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) {
+  descriptor.value = make_mutator(target);
+  return descriptor;
+}
+
+function make_mutator(target:any) {
+  return function stimo_withMutations(mutator: (any)=>any): any {
+    // make copy, set it in in-place mutation mode and apply mutator
+    // otherwise create clone
+    let result;
+    const clonedObject = Object.create(this);
+    // copy values array from the original object
+    clonedObject.__stimo__PropertyValues = this.__stimo__PropertyValues.slice(0);
+    try {
+      clonedObject.__stimo__Constructing = (clonedObject.__stimo__Constructing || 0) + 1;
+      // and mutate clone in-place
+      result = mutator(clonedObject);
+    } finally {
+      // reset in-place mutation mode
+      clonedObject.__stimo__Constructing--;
+    }
+    return result;
+  }
+}
 /**
  * maintains PropNameToIndexMap
  * @param target
