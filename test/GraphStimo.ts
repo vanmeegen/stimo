@@ -120,6 +120,33 @@ export class GExtendedNode extends GNode {
   }
 }
 
+@stimo
+export class GMoreExtendedNode extends GExtendedNode {
+  constructor(additional: string, title: string,
+              id: number,
+              x: number,
+              y: number,
+              width: number,
+              height: number,
+              selection: SelectionKind = SelectionKind.None, additionalNumber: number) {
+    super(additional, title, id, x, y, width, height, selection);
+    this.setAdditionalNumber(additionalNumber);
+  }
+
+  @stimo_get get additionalNumber(): number {
+    return null;
+  }
+
+  @stimo_set setAdditionalNumber(value: number) {
+    return null;
+  }
+
+  getStringRepresentation(): string {
+    return "additional: " + this.additional + ", title: " + this.title + ", id: " + this.id + ", x: " + this.x + ", y: "
+        + this.y + ", width: " + this.width + ", height: " + this.height + ", selection: " + this.selection + ", additionalNumber: " + this.additionalNumber;
+  }
+}
+
 export class Graph {
   nodes = Map<Number,GNode>();
 

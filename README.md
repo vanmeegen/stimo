@@ -35,7 +35,7 @@ Disadvantages:
 * node and npm
 
 ## Installation
-* TODO: should be npm install stimo
+* npm install stimo
 * in tsconfig.json set CompilerOption "experimentalDecorators": true
 
 ## Usage

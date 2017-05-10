@@ -1,5 +1,5 @@
 /// <reference path="../node_modules/@types/mocha/index.d.ts" />
-import {GNode, Graph, GExtendedNode} from './GraphStimo'
+import {GNode, Graph, GExtendedNode, GMoreExtendedNode, SelectionKind} from './GraphStimo'
 import {expect} from 'chai'
 
 describe('access and code completion', () => {
@@ -59,7 +59,7 @@ describe('graph.moveNodes', () => {
   });
 });
 
-describe('GraphStimo: inheritance', () => {
+describe('supports inheritance', () => {
   // constructor
   let n = new GExtendedNode("additional", "Title", 1, 1, 2, 10, 10);
   it("can get extended properties with dot", ()=> {
@@ -77,6 +77,33 @@ describe('GraphStimo: inheritance', () => {
   });
   it('can call inherited methods ', () => {
     expect(n.getRatio()).equals(1);
+  });
+});
+
+describe('supports 2 level inheritance', () => {
+  // constructor
+  let n = new GMoreExtendedNode("additional", "Title", 1, 10, 20, 100, 25, SelectionKind.None, 99);
+  it("can get extended properties with dot", ()=> {
+    expect(n.additionalNumber).equals(99);
+  });
+  it("can set properties with setter", ()=> {
+    expect(n.setAdditionalNumber(999).additionalNumber).equals(999);
+  });
+  it('returns the correct derived class clone', () => {
+    expect(n).to.be.an.instanceOf(GMoreExtendedNode);
+    expect(n.setTitle("mytitle")).to.be.an.instanceOf(GMoreExtendedNode);
+    expect(n.setAdditionalNumber(9999)).to.be.an.instanceOf(GMoreExtendedNode);
+  });
+  it('can call inherited methods', () => {
+    expect(n.getStringRepresentation()).to.equal("additional: additional, title: Title, id: 1, x: 10, y: 20, width: 100, height: 25, selection: 0, additionalNumber: 99");
+    expect(n.getRatio()).equals(4);
+  });
+  it('can set all variables without mixing indices up', () => {
+    n = n.setAdditional("additional2").setTitle("Title2").setId(2).setX(20).setY(40).setWidth(200).setHeight(50).setSelection(SelectionKind.Primary) as GMoreExtendedNode;
+    n = (n as GMoreExtendedNode).setAdditionalNumber(198);
+
+    expect(n.getStringRepresentation()).to.equal("additional: additional2, title: Title2, id: 2, x: 20, y: 40, width: 200, height: 50, selection: 1, additionalNumber: 198");
+    expect(n.getRatio()).equals(4);
   });
 });
 
