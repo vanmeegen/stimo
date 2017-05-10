@@ -107,13 +107,20 @@ function make_mutator(target:any) {
  */
 function lookupOrCreateIndex(target: any, propertyKey: string) {
   // if not yet existing, create map of property names to indices into values array
-  const indices = target.__stimo__PropNameToIndexMap || (target.__stimo__PropNameToIndexMap = {});
+  let indices;
+  if (target.hasOwnProperty("__stimo__PropNameToIndexMap")){
+    indices = target.__stimo__PropNameToIndexMap;
+  } else {
+       indices = target.__stimo__PropNameToIndexMap = clone(target.__stimo__PropNameToIndexMap)||{};
+  }
   let index = target.__stimo__PropNameToIndexMap[propertyKey];
   if (typeof index == 'undefined') {
+    //console.log("Index for propertyKey '" + propertyKey + "' at target '" + target.constructor.name + "' not found, creating one.");
     // update index
     index = target.__stimo__MaxIndex || 0;
     target.__stimo__MaxIndex = index + 1;
     indices[propertyKey] = index;
+    //console.log("Index created: " + index);
   }
   return index;
 }
