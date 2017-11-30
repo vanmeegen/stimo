@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f36b814-13f4-4616-91c4-61801ad46596" name="Default" comment="">
+    <list default="true" id="7f36b814-13f4-4616-91c4-61801ad46596" name="Default" comment="fixed problem with deep equals and different internal state __stimo__constructing">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stimo.ts" afterPath="$PROJECT_DIR$/src/stimo.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/graphStimo.spec.ts" afterPath="$PROJECT_DIR$/test/graphStimo.spec.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts" afterPath="$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts" />
     </list>
     <ignored path="stimo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +22,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="stimo" />
   </component>
@@ -29,8 +30,8 @@
       <file leaf-file-name="twoSubclassesMixIndices.spec.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/twoSubclassesMixIndices.spec.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -38,11 +39,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stimo.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stimo.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stimo.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="122" column="6" lean-forward="false" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
+            <state relative-caret-position="264">
+              <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphStimo.spec.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/graphStimo.spec.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="35" column="2" lean-forward="false" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphHandcoded.spec.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -53,6 +84,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>console</find>
+      <find>__stimo__Constructing</find>
+      <find>delete</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -68,11 +101,12 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/test/GraphStimo.ts" />
-        <option value="$PROJECT_DIR$/test/graphStimo.spec.ts" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/twoSubclassesMixIndices.spec.ts" />
+        <option value="$PROJECT_DIR$/test/graphStimo.spec.ts" />
         <option value="$PROJECT_DIR$/src/stimo.ts" />
+        <option value="$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts" />
       </list>
     </option>
   </component>
@@ -113,52 +147,42 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stimo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stimo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stimo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stimo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stimo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stimo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="stimo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stimo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stimo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stimo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stimo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stimo" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stimo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stimo" type="462c0819:PsiDirectoryNode" />
+              <item name="testimmutability" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stimo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stimo" type="462c0819:PsiDirectoryNode" />
+              <item name="testimmutability" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="nodejs_interpreter_path" value="C:/virtual_d/dev/ide/nodejs/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.splitter.proportion" value="0.2596525" />
@@ -166,6 +190,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\virtual_d\dev\ide\nodejs\node.exe" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="D:\dev\ide\metus-master\git\stimo\node_modules\mocha" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -188,18 +213,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.test\twoSubclassesMixIndices.spec.ts">
-    <configuration default="false" name="test\twoSubclassesMixIndices.spec.ts" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Mocha.equals works fine">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
       <pass-parent-env>true</pass-parent-env>
       <envs />
       <ui>bdd</ui>
       <extra-mocha-options>--require ts-node/register</extra-mocha-options>
-      <test-kind>TEST_FILE</test-kind>
-      <test-file>$PROJECT_DIR$/test/twoSubclassesMixIndices.spec.ts</test-file>
-      <method />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
@@ -238,15 +271,6 @@
       <option name="filePath" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -254,25 +278,56 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+    <configuration name="equals works fine" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
-      <working-directory />
+      <working-directory>$PROJECT_DIR$</working-directory>
       <pass-parent-env>true</pass-parent-env>
       <envs />
       <ui>bdd</ui>
       <extra-mocha-options>--require ts-node/register</extra-mocha-options>
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/test/graphStimo.spec.ts</test-file>
+      <test-names>
+        <name value="equals works fine" />
+      </test-names>
     </configuration>
-    <list size="1">
+    <configuration name="equals works fine.a stimo object will be deep equal if it was constructed and compared to a setter was called" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/graphStimo.spec.ts</test-file>
+      <test-names>
+        <name value="equals works fine" />
+        <name value="a stimo object will be deep equal if it was constructed and compared to a setter was called" />
+      </test-names>
+    </configuration>
+    <configuration name="test\twoSubclassesMixIndices.spec.ts" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST_FILE</test-kind>
+      <test-file>$PROJECT_DIR$/test/twoSubclassesMixIndices.spec.ts</test-file>
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Mocha.test\twoSubclassesMixIndices.spec.ts" />
+      <item index="1" class="java.lang.String" itemvalue="Mocha.equals works fine.a stimo object will be deep equal if it was constructed and compared to a setter was called" />
+      <item index="2" class="java.lang.String" itemvalue="Mocha.equals works fine" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Mocha.test\twoSubclassesMixIndices.spec.ts" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Mocha.equals works fine" />
+        <item index="1" class="java.lang.String" itemvalue="Mocha.equals works fine.a stimo object will be deep equal if it was constructed and compared to a setter was called" />
+        <item index="2" class="java.lang.String" itemvalue="Mocha.test\twoSubclassesMixIndices.spec.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -307,6 +362,7 @@
       <workItem from="1477054746988" duration="1996000" />
       <workItem from="1477056776486" duration="826000" />
       <workItem from="1494400825234" duration="1726000" />
+      <workItem from="1512033768059" duration="938000" />
     </task>
     <task id="LOCAL-00001" summary="initial version with examples of various typed object approaches in testimmutability">
       <created>1474980148655</created>
@@ -347,17 +403,17 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_twoSubclassesMixIndices_spec_ts - 2017.05.10 at 13h 59m 07s.xml">
-      <configuration name="test\twoSubclassesMixIndices.spec.ts" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="equals_works_fine - 2017.11.30 at 10h 33m 24s.xml">
+      <configuration name="equals works fine" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="test_twoSubclassesMixIndices_spec_ts - 2017.05.10 at 13h 59m 43s.xml">
-      <configuration name="test\twoSubclassesMixIndices.spec.ts" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="equals_works_fine - 2017.11.30 at 10h 35m 16s.xml">
+      <configuration name="equals works fine" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="test_twoSubclassesMixIndices_spec_ts - 2017.05.10 at 14h 00m 39s.xml">
-      <configuration name="test\twoSubclassesMixIndices.spec.ts" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="equals_works_fine - 2017.11.30 at 10h 35m 49s.xml">
+      <configuration name="equals works fine" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="test_twoSubclassesMixIndices_spec_ts - 2017.05.10 at 14h 01m 13s.xml">
-      <configuration name="test\twoSubclassesMixIndices.spec.ts" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="equals_works_fine_a_stimo_object_will_be_deep_equal_if_it_was_constructed_and_compared_to_a_setter_was_called - 2017.11.30 at 10h 28m 46s.xml">
+      <configuration name="equals works fine.a stimo object will be deep equal if it was constructed and compared to a setter was called" configurationId="mocha-javascript-test-runner" />
     </history-entry>
     <history-entry file="test_twoSubclassesMixIndices_spec_ts - 2017.05.10 at 14h 10m 11s.xml">
       <configuration name="test\twoSubclassesMixIndices.spec.ts" configurationId="mocha-javascript-test-runner" />
@@ -379,7 +435,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29112000" />
+    <option name="totallyTimeSpent" value="30050000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -391,42 +447,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="0" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23529412" sideWeight="0.5031521" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15248227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.49789253" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.49842396" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23566379" sideWeight="0.5128104" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41255963" sideWeight="0.49881798" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2837838" sideWeight="0.47990543" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32672483" sideWeight="0.48463356" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41255963" sideWeight="0.501182" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5476753" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.49789253" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23566379" sideWeight="0.5128104" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750398" sideWeight="0.4862096" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14944357" sideWeight="0.48305753" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14944357" sideWeight="0.5169425" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23529412" sideWeight="0.5094563" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14908803" sideWeight="0.4783294" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14908803" sideWeight="0.5216706" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23473434" sideWeight="0.5078802" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15248227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298887" sideWeight="0.49842396" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.49842396" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.55245125" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.gitignore" />
@@ -447,15 +493,15 @@
     <MESSAGE value="return this if setter does not mutate value" />
     <MESSAGE value="make npm package and build" />
     <MESSAGE value="typed mutation helper example for nested objects in GraphStimo" />
-    <option name="LAST_COMMIT_MESSAGE" value="typed mutation helper example for nested objects in GraphStimo" />
+    <MESSAGE value="fixed problem with deep equals and different internal state __stimo__constructing" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed problem with deep equals and different internal state __stimo__constructing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/stimo.ts</url>
-          <line>26</line>
-          <properties />
+          <line>30</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -464,14 +510,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.npmignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -483,9 +521,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#155#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -539,9 +575,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#155#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -676,16 +710,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-344">
             <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-            <folding>
-              <marker date="1494402473468" expanded="true" signature="1528:2027" ph="{...}" />
-              <marker date="1494402473468" expanded="true" signature="1578:1602" ph="/*...*/" />
-              <marker date="1494402473468" expanded="true" signature="1665:1689" ph="/*...*/" />
-              <marker date="1494402473468" expanded="true" signature="1737:1761" ph="/*...*/" />
-              <marker date="1494402473468" expanded="true" signature="1818:1842" ph="/*...*/" />
-              <marker date="1494402473468" expanded="true" signature="1886:1927" ph="{...}" />
-              <marker date="1494402473468" expanded="true" signature="1975:2025" ph="{...}" />
-              <marker date="1494402473468" expanded="true" signature="2301:2355" ph="//..." />
-            </folding>
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -693,16 +718,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1494402473468" expanded="true" signature="1528:2027" ph="{...}" />
-            <marker date="1494402473468" expanded="true" signature="1578:1602" ph="/*...*/" />
-            <marker date="1494402473468" expanded="true" signature="1665:1689" ph="/*...*/" />
-            <marker date="1494402473468" expanded="true" signature="1737:1761" ph="/*...*/" />
-            <marker date="1494402473468" expanded="true" signature="1818:1842" ph="/*...*/" />
-            <marker date="1494402473468" expanded="true" signature="1886:1927" ph="{...}" />
-            <marker date="1494402473468" expanded="true" signature="1975:2025" ph="{...}" />
-            <marker date="1494402473468" expanded="true" signature="2301:2355" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -727,16 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/graphStimo.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="104" column="170" lean-forward="false" selection-start-line="104" selection-start-column="170" selection-end-line="104" selection-end-column="170" />
-          <folding>
-            <element signature="e#65#155#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/GraphStimo.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
@@ -755,28 +761,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/twoSubclassesMixIndices.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/stimo.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="122" column="6" lean-forward="false" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
+        <state relative-caret-position="264">
+          <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/graphStimo.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="35" column="2" lean-forward="false" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -113,7 +113,7 @@ describe('withMutations', () => {
   let check = (mutated: GNode) => {
     expect(mutated).to.not.equal(n);
     expect((mutated as any).__stimo__Constructing).to.equal(1,"mutated instance is not mutable");
-  }
+  };
   // constructor
   it("will only copy once and then mutate inplace", ()=> {
     let mutated: GNode = n.withMutations((m: GNode)=> {
@@ -124,3 +124,25 @@ describe('withMutations', () => {
     expect(mutated.width).to.equal(10);
   });
 });
+
+describe('equals works fine', () => {
+    let n: GNode = new GNode("Title", 0, 0, 0, 0, 0);
+    let flag: boolean = false;
+    let check = (mutated: GNode) => {
+        expect(mutated).to.not.equal(n);
+        expect((mutated as any).__stimo__Constructing).to.equal(1,"mutated instance is not mutable");
+    };
+    // constructor
+    it("a stimo object will be deep equal if it was constructed and compared to a setter was called", ()=> {
+        let n: GNode = new GNode("Title", 0, 0, 0, 0, 0);
+        let m: GNode = n.setTitle("Bla").setTitle("Title");
+        expect(n).to.deep.equal(m);
+    });
+    // withmutations
+    it("a stimo object will be deep equal if it was mutated with withmutations and compared to a setter was called", ()=> {
+        let n: GNode = new GNode("Title", 0, 0, 0, 0, 0);
+        let m: GNode = n.withMutations(n => n.setTitle("bla").setHeight(5)).setTitle("Title").setHeight(0);
+        expect(n).to.deep.equal(m);
+    });
+});
+
