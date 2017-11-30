@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f36b814-13f4-4616-91c4-61801ad46596" name="Default" comment="fixed problem with deep equals and different internal state __stimo__constructing">
+    <list default="true" id="7f36b814-13f4-4616-91c4-61801ad46596" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stimo.ts" afterPath="$PROJECT_DIR$/src/stimo.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/graphStimo.spec.ts" afterPath="$PROJECT_DIR$/test/graphStimo.spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts" afterPath="$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="stimo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +28,7 @@
       <file leaf-file-name="twoSubclassesMixIndices.spec.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/twoSubclassesMixIndices.spec.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="0">
               <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -59,10 +57,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graphHandcoded.spec.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="graphHandcoded.spec.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="277">
               <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
@@ -70,10 +68,20 @@
         </entry>
       </file>
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testimmutability/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+            <state relative-caret-position="34">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -102,11 +110,11 @@
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/test/GraphStimo.ts" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/twoSubclassesMixIndices.spec.ts" />
         <option value="$PROJECT_DIR$/test/graphStimo.spec.ts" />
         <option value="$PROJECT_DIR$/src/stimo.ts" />
         <option value="$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -160,17 +168,6 @@
             <path>
               <item name="stimo" type="b2602c69:ProjectViewProjectNode" />
               <item name="stimo" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stimo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stimo" type="462c0819:PsiDirectoryNode" />
-              <item name="testimmutability" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stimo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stimo" type="462c0819:PsiDirectoryNode" />
-              <item name="testimmutability" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -362,7 +359,7 @@
       <workItem from="1477054746988" duration="1996000" />
       <workItem from="1477056776486" duration="826000" />
       <workItem from="1494400825234" duration="1726000" />
-      <workItem from="1512033768059" duration="938000" />
+      <workItem from="1512033768059" duration="1408000" />
     </task>
     <task id="LOCAL-00001" summary="initial version with examples of various typed object approaches in testimmutability">
       <created>1474980148655</created>
@@ -399,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475562607458</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed problem with deep equals and different internal state __stimo__constructing">
+      <created>1512034730346</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1512034730346</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -435,7 +439,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30050000" />
+    <option name="totallyTimeSpent" value="30520000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,13 +514,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.npmignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/graphStimo.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -705,23 +702,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/chai/index.d.ts" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-344">
-            <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/codeStyleSettings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -763,19 +743,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/twoSubclassesMixIndices.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="0">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,8 +769,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testimmutability/test/graphHandcoded.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="277">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testimmutability/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="17">
+            <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+            <folding>
+              <marker date="1512033754281" expanded="true" signature="1528:2027" ph="{...}" />
+              <marker date="1512033754281" expanded="true" signature="1578:1602" ph="/*...*/" />
+              <marker date="1512033754281" expanded="true" signature="1665:1689" ph="/*...*/" />
+              <marker date="1512033754281" expanded="true" signature="1737:1761" ph="/*...*/" />
+              <marker date="1512033754281" expanded="true" signature="1818:1842" ph="/*...*/" />
+              <marker date="1512033754281" expanded="true" signature="1886:1927" ph="{...}" />
+              <marker date="1512033754281" expanded="true" signature="1975:2025" ph="{...}" />
+              <marker date="1512033754281" expanded="true" signature="2301:2355" ph="//..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>

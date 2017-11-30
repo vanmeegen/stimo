@@ -1,6 +1,6 @@
 {
   "name": "stimo",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "simple typed immutable objects for typescript, with full typing support and efficient clones",
   "main": "./dist/stimo.js",
   "types": "./dist/stimo.d.ts",
